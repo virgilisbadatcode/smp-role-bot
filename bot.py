@@ -8,6 +8,10 @@ from decimal import Decimal
 
 client = discord.Client(intents=discord.Intents.all())
 
+key = conf.get('key')
+channel = conf.get('channel')
+role = conf.get('role)
+
 @client.event
 async def on_ready():
     print('smp-role-bot Copyright (C) 2023 virgildoesthings \nThis program comes with ABSOLUTELY NO WARRANTY; for details see ./LICENSE \nThis is free software, and you are welcome to redistribute it \nunder certain conditions; for details see ./LICENSE')
