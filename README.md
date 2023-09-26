@@ -1,7 +1,7 @@
 # smp-role-bot
 _Very, very simple bot to add roles after a text command._
 ## Configuration
-  1. Put your bot token in conf.py and set the bot channels, the command and the role(s) to be added.
+  1. Put your bot token in conf.txt and set the bot channels, the command and the role(s) to be added.
   2. Make sure you have Python 3.5.3 or later
   3. Make sure you have the latest version of discordpy installed from GitHub [**here**](https://github.com/Rapptz/discord.py)
 ## Running
