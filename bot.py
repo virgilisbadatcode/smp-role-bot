@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#https://github.com/mulveyben1/factorial-bot
 
 import math
 import discord
@@ -8,10 +7,11 @@ import conf
 from decimal import Decimal
 
 client = discord.Client(intents=discord.Intents.all())
-#https://github.com/mulveyben1/factorial-bot
 
 @client.event
 async def on_ready():
+    print('smp-role-bot Copyright (C) 2023 virgildoesthings \nThis program comes with ABSOLUTELY NO WARRANTY; for details see ./LICENSE \nThis is free software, and you are welcome to redistribute it \nunder certain conditions; for details see ./LICENSE')
+    print('-----')
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
@@ -34,14 +34,6 @@ async def on_message(message):
 
         elif message.content.find('!') == 0:  # ! is typically used for commands when in the 0 index of a message
             print("Not a factorial.")
-
-        elif str(message.author) == "DJ Mitch#4397":  # That bot will never have factorials,ignore it
-            print("Not a factorial.")
-            
-        elif message.content.find("image") != -1 and message.content.find("image") < message.content.find('!'):
-            await message.channel.send("https://instrumental-tracking-others-pill.trycloudflare.com/140800ed-b8ac-4b32-a86f-57ea2071a30b")
-		
-
 
         else:
             numberpre = None
