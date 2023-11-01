@@ -3,14 +3,17 @@
 import math
 import discord
 import re
-import conf
+import yaml
 from decimal import Decimal
 
 client = discord.Client(intents=discord.Intents.all())
 
-key = conf.get('key')
-channel = conf.get('channel')
-role = conf.get('role)
+with open('config.yml', 'r') as config_file:
+    config = yaml.safe_load(config_file)
+
+key = config["key"]
+channel = config["channel"]
+role = config["role"]
 
 @client.event
 async def on_ready():
@@ -30,4 +33,4 @@ async def on_message(message):
             await add_roles(conf.role)
             await message.channel.send("SMP Member role granted.")
 
-client.run(conf.key)
+client.run(key)
